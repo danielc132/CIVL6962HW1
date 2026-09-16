@@ -36,7 +36,7 @@ def load_nice_transit_data():
         
         # Delays in minutes (higher during afternoon peak hours)
         base_delay = np.random.exponential(scale=3.0, size=1500)
-        peak_multiplier = np.where((hours >= 7 & hours <= 9) | (hours >= 16 & hours <= 19), 2.5, 1.0)
+        peak_multiplier = np.where(((hours >= 7) & (hours <= 9)) | ((hours >= 16) & (hours <= 19)), 2.5, 1.0)
         delays_min = base_delay * peak_multiplier
         
         # Vehicle speeds impacted by delay and headway gaps
