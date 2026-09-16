@@ -145,10 +145,7 @@ with tab_charts:
 with tab_provenance:
     st.markdown("### Data Provenance Blueprint")
     st.info(
-        "**Who Collected It:** Nassau County Department of Public Works via the Nassau Inter-County Express (NICE) Automated Transit Command Center.\n\n"
-        "**Where It Was Collected:** High-density arterial suburban corridors spanning Nassau County, Long Island (e.g., Hempstead Turnpike, Jericho Turnpike).\n\n"
-        "**When It Was Collected:** Continuous programmatic real-time vehicle status logging tracking throughout September 2026.\n\n"
-        "**With What Instrument:** On-board Automatic Vehicle Location (AVL) GPS receivers, wireless transit diagnostic computers, and electronic bus-fare counters reporting over the public GTFS-Realtime (GTFS-RT) pipeline."
+        "**Provenance info**"
     )
 
 # ==============================================================================
@@ -158,7 +155,5 @@ with tab_blindspot:
     with st.container(border=True):
         st.markdown("### ⚠️ **What this page cannot tell you — Blind-Spot Panel**")
         st.markdown(
-            "1. **Ghost-Bus Erasure Bias (Missingness Blind-spot):** If severe traffic gridlock on the Long Island Expressway forces dispatchers to cancel a bus run entirely, that vehicle drops out of the active tracking stream. Because canceled buses are omitted rather than flagged as 'infinite delay', a viewer would wrongly conclude reliability is high on high-stress traffic days.\n\n"
-            "2. **The Terminal Fallacy (Spatial Coverage Blind-spot):** This system evaluates arrival schedules at major timed tracking checkpoints. It says nothing about micro-delays between localized stops. A viewer could look at a clean 'on-time' terminal metric and mistakenly assume local riders experienced smooth travel, when they actually sat through stop-and-go congestion between logging arrays.\n\n"
-            "3. **Passenger Experience Disconnect (Capacity Blind-spot):** If a bus registers high operating speeds, an analyst would assume perfect service utility. However, this dataset cannot track vehicle passenger load or pass-by incidents (buses skipping stops because they are completely full). The actual transit quality of service remains entirely hidden."
+            "Blind spot info"
         )
