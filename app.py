@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 from pathlib import Path
 
 # ==============================================================================
@@ -53,7 +54,6 @@ def compile_raw_transit_data():
     
     else:
         # Emergency Fallback Generator so your website stays up even if file paths change
-        import numpy as np
         np.random.seed(42)
         routes = ["n6 (Hempstead - OMNY Link)", "n20H (Flushing - Great Neck)", "n40 (Mineola - Freeport)"]
         return pd.DataFrame({
