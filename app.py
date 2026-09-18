@@ -72,6 +72,8 @@ st.sidebar.info(
     "retrieve the same large amounts of data."
 )
 
+st.info("This dashboard was built with assistance from Gemini AI.")
+
 df = compile_raw_transit_data()
 
 # ==============================================================================
